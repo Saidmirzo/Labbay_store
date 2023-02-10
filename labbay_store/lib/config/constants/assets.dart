@@ -22,6 +22,9 @@ abstract class _AssetsHolder {
 class _Icons extends _AssetsHolder {
   const _Icons() : super('assets/icons');
 
+  String get call => "$basePath/ic_call.svg";
+
+  ///
   String get logoLabbay => "$basePath/logo_labbay.svg";
 
   String get logoLabbayWhite => "$basePath/logo_labbay_white.svg";
@@ -71,6 +74,8 @@ class _Icons extends _AssetsHolder {
 
 class _Images extends _AssetsHolder {
   const _Images() : super('assets/images');
+
+  String get user1 => "$basePath/user1.png";
 
   String get desertBg => "$basePath/desert_bg.png";
 

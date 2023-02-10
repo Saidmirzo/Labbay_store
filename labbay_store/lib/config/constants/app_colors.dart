@@ -6,6 +6,7 @@ abstract class AppColors {
   static const Color black = Color(0xFF000000);
   static const Color accentColor = Colors.white;
   static const Color green = Color(0xFF15BE77);
+  static const Color green2 = Color(0xFF53E88B);
   static const Color unselectedText = Color(0xFFBDBDBD);
   static const Color freePlaceGrid = Color(0xFFE8F9F2);
   static const Color pink = Color(0xFFFFE0E0);
