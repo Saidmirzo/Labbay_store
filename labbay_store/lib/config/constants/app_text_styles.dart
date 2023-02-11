@@ -20,7 +20,7 @@ abstract class AppTextStyles {
       fontStyle: FontStyle.normal,
       fontSize: 32.sp,
       color: AppColors.black);
-      static TextStyle head32w8 = TextStyle(
+  static TextStyle head32w8 = TextStyle(
       fontFamily: fontFamily,
       fontWeight: FontWeight.w800,
       fontStyle: FontStyle.normal,
@@ -53,13 +53,12 @@ abstract class AppTextStyles {
       fontStyle: FontStyle.normal,
       fontSize: 36.sp,
       color: AppColors.black);
-    static TextStyle head38w5 = TextStyle(
+  static TextStyle head38w5 = TextStyle(
       fontFamily: fontFamily,
       fontWeight: FontWeight.w500,
       fontStyle: FontStyle.normal,
       fontSize: 38.sp,
       color: AppColors.black);
-
 
   static TextStyle head25w5 = TextStyle(
       fontFamily: fontFamily,
@@ -163,13 +162,13 @@ abstract class AppTextStyles {
       fontStyle: FontStyle.normal,
       fontSize: 18.sp,
       color: AppColors.black);
-   static TextStyle body18w7 = TextStyle(
+  static TextStyle body18w7 = TextStyle(
       fontFamily: fontFamily,
       fontWeight: FontWeight.w700,
       fontStyle: FontStyle.normal,
       fontSize: 18.sp,
       color: AppColors.black);
-   static TextStyle body18w8 = TextStyle(
+  static TextStyle body18w8 = TextStyle(
       fontFamily: fontFamily,
       fontWeight: FontWeight.w800,
       fontStyle: FontStyle.normal,
@@ -182,7 +181,7 @@ abstract class AppTextStyles {
       fontStyle: FontStyle.normal,
       fontSize: 16.sp,
       color: AppColors.black);
-  
+
   static TextStyle body16w8 = TextStyle(
       fontFamily: fontFamily,
       fontWeight: FontWeight.w800,
@@ -234,6 +233,18 @@ abstract class AppTextStyles {
       fontWeight: FontWeight.w600,
       fontStyle: FontStyle.normal,
       fontSize: 12.sp,
+      color: AppColors.black);
+  static TextStyle body6w5 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 6.sp,
+      color: AppColors.black);
+  static TextStyle body7w5 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 7.sp,
       color: AppColors.black);
 
   static TextStyle body12w5 = TextStyle(
@@ -350,7 +361,7 @@ abstract class AppTextStyles {
       fontStyle: FontStyle.normal,
       fontSize: 14.sp,
       color: AppColors.black);
-   static TextStyle body14w8 = TextStyle(
+  static TextStyle body14w8 = TextStyle(
       fontFamily: fontFamily,
       fontWeight: FontWeight.w800,
       fontStyle: FontStyle.normal,
@@ -515,13 +526,12 @@ abstract class AppTextStyles {
       fontStyle: FontStyle.normal,
       fontSize: 26.sp,
       color: AppColors.black);
-    static TextStyle body26w8 = TextStyle(
+  static TextStyle body26w8 = TextStyle(
       fontFamily: fontFamily,
       fontWeight: FontWeight.w800,
       fontStyle: FontStyle.normal,
       fontSize: 26.sp,
       color: AppColors.black);
-
 
   static TextStyle body22w7 = TextStyle(
       fontFamily: fontFamily,

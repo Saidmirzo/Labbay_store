@@ -22,6 +22,10 @@ abstract class AppColors {
   static const Color checkBoxColor =  Color(0xff323232);
   static const Color backgraund =  Color(0xffFBFBFB);
   static const Color galleryAddBg =  Color(0xffD9FFE7);
+  static const Color chartColor =  Color(0xff9BFFD5);
+  static const Color chartLeftTextColor =  Color(0xffB6B6B6);
+  static const Color chartBottomTextColor =  Color(0xff828282);
+  static const Color chartGridLineColor =  Color(0xffC0FFD8);
   
   static  Color shadowColor = const Color(0xff5AEAB6).withOpacity(.2);
   

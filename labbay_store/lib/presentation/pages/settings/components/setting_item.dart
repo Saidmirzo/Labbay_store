@@ -29,14 +29,15 @@ class SettingsItem extends StatelessWidget {
         margin: EdgeInsets.only(bottom: 12.h),
         padding: EdgeInsets.only(left: 25.w, right: 19.w),
         decoration: BoxDecoration(
-            color: AppColors.accentColor,
-            borderRadius: BorderRadius.circular(22.r),
-            boxShadow: [
-              BoxShadow(
-                color: AppColors.shadowColor,
-                blurRadius: 50,
-              ),
-            ]),
+          color: AppColors.accentColor,
+          borderRadius: BorderRadius.circular(22.r),
+          boxShadow: [
+            BoxShadow(
+              color: AppColors.shadowColor,
+              blurRadius: 50,
+            ),
+          ],
+        ),
         child: Row(
           children: [
             SvgPicture.asset(iconPath),

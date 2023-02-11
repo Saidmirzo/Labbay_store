@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:labbay_store/presentation/pages/reports/view/reports_page.dart';
 import 'package:labbay_store/presentation/pages/settings/view/settings_page.dart';
 
 import '../pages/main/main_page.dart';
 
 class Routes {
   static const mainPage = '/mainPage';
-  static const settingsPage = '/';
+  static const settingsPage = '/settingsPage';
+  static const reportsPage = '/';
 
   static Route<dynamic> generateRoute(RouteSettings routeSettings) {
     try {
@@ -22,6 +24,11 @@ class Routes {
           return MaterialPageRoute(
             settings: routeSettings,
             builder: (_) => const SettingsPage(),
+          );
+        case reportsPage:
+          return MaterialPageRoute(
+            settings: routeSettings,
+            builder: (_) => const ReportsPage(),
           );
         default:
           return MaterialPageRoute(
