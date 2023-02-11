@@ -24,6 +24,10 @@ class _Icons extends _AssetsHolder {
 
   String get call => "$basePath/ic_call.svg";
 
+  String get moneyTime => "$basePath/ic_money_time.svg";
+
+  String get addCircle => "$basePath/ic_add_circle.svg";
+
   ///
   String get logoLabbay => "$basePath/logo_labbay.svg";
 
@@ -52,7 +56,7 @@ class _Icons extends _AssetsHolder {
   String get arrowLeft2 => "$basePath/ic_arrow_left.svg";
 
   String get star => "$basePath/ic_star.svg";
-  
+
   String get shoppingCart => "$basePath/ic_shopping_cart.svg";
 
   String get logout => "$basePath/ic_logout.svg";
@@ -60,16 +64,14 @@ class _Icons extends _AssetsHolder {
   String get settingLock => "$basePath/ic_settings_lock.svg";
 
   String get userOctagon => "$basePath/ic_user_octagon.svg";
-  
+
   String get translate => "$basePath/ic_translate.svg";
-  
+
   String get monitorMobile => "$basePath/ic_monitor_mobile.svg";
 
   String get infoCircle => "$basePath/ic_info_circle.svg";
 
   String get checkbox => "$basePath/ic_checkbox.svg";
- 
-  
 }
 
 class _Images extends _AssetsHolder {
@@ -78,6 +80,8 @@ class _Images extends _AssetsHolder {
   String get user1 => "$basePath/user1.png";
 
   String get defaultAvatar => "$basePath/default_avatar.png";
+
+  String get gamburger => "$basePath/gamburger.png";
 
   String get desertBg => "$basePath/desert_bg.png";
 
@@ -94,14 +98,10 @@ class _Images extends _AssetsHolder {
   String get osh => '$basePath/osh.png';
 
   String get ichimlik => '$basePath/ichimlik.png';
-
-  
 }
 
 class _Videos extends _AssetsHolder {
   const _Videos() : super('assets/videos');
 
   String get video1 => "$basePath/1.mp4";
-
- 
 }
