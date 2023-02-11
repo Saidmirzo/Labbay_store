@@ -34,6 +34,7 @@ class _FoodListTileState extends State<FoodListTile> {
     return Container(
       height: 87.h,
       padding: EdgeInsets.only(left: 10.w, right: 28.w),
+      margin: EdgeInsets.symmetric(vertical: 6.h),
       width: double.maxFinite,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15.r),

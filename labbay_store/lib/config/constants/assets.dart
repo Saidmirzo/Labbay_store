@@ -83,6 +83,8 @@ class _Images extends _AssetsHolder {
 
   String get gamburger => "$basePath/gamburger.png";
 
+  String get cola => "$basePath/cola.png";
+
   String get desertBg => "$basePath/desert_bg.png";
 
   String get loginBg => "$basePath/login_bg.png";
