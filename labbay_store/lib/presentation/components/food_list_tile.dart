@@ -5,7 +5,6 @@ import 'package:flutter_switch/flutter_switch.dart';
 import 'package:labbay_store/config/constants/app_colors.dart';
 import 'package:labbay_store/config/constants/app_text_styles.dart';
 
-
 // ignore: must_be_immutable
 class FoodListTile extends StatefulWidget {
   FoodListTile({
@@ -60,6 +59,9 @@ class _FoodListTileState extends State<FoodListTile> {
             width: 27.w,
             height: 16.h,
             toggleSize: 12.r,
+            activeColor: AppColors.green2.withOpacity(.3),
+            inactiveColor: AppColors.green2.withOpacity(.3),
+            toggleColor: widget.isSwitched ? AppColors.green : AppColors.green.withOpacity(.3),
             value: widget.isSwitched,
             borderRadius: 50.0,
             padding: 2.0,
