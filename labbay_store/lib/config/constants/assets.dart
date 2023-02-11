@@ -24,6 +24,8 @@ class _Icons extends _AssetsHolder {
 
   String get call => "$basePath/ic_call.svg";
 
+  String get check => "$basePath/ic_check.svg";
+
   ///
   String get logoLabbay => "$basePath/logo_labbay.svg";
 
