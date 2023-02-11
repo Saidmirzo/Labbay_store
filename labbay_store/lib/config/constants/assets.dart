@@ -77,6 +77,8 @@ class _Images extends _AssetsHolder {
 
   String get user1 => "$basePath/user1.png";
 
+  String get defaultAvatar => "$basePath/default_avatar.png";
+
   String get desertBg => "$basePath/desert_bg.png";
 
   String get loginBg => "$basePath/login_bg.png";

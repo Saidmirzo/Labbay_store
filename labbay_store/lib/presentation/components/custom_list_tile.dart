@@ -10,28 +10,37 @@ import 'splash_button.dart';
 class CustomListTile extends StatelessWidget {
   const CustomListTile({
     super.key,
-    required this.avatar,
+    this.avatar,
     required this.username,
     required this.address,
     required this.type,
-    required this.price,
+    this.price,
     this.callFunc,
     this.avatarRadius,
+    this.margin,
+    this.rightColor,
+    this.rightIcon,
+    this.isCourier = false,
   });
 
-  final String avatar;
+  final String? avatar;
   final String username;
   final String address;
   final String type;
-  final String price;
+  final String? price;
+  final EdgeInsets? margin;
   final double? avatarRadius;
   final Function()? callFunc;
+  final Color? rightColor;
+  final String? rightIcon;
+  final bool isCourier;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 102.h,
       width: double.maxFinite,
+      margin: margin,
       padding: EdgeInsets.only(left: 14.w),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15.r),
@@ -40,7 +49,7 @@ class CustomListTile extends StatelessWidget {
       child: Row(
         children: [
           CircleAvatar(
-            foregroundImage: AssetImage(avatar),
+            foregroundImage: AssetImage(avatar ?? Assets.images.defaultAvatar),
             radius: avatarRadius ?? 38.r,
           ),
           SizedBox(width: 24.w),
@@ -67,7 +76,7 @@ class CustomListTile extends StatelessWidget {
                 children: [
                   RichText(
                     text: TextSpan(
-                        text: "Turi: ",
+                        text: isCourier ? "Avto turi: " : "Turi: ",
                         style: AppTextStyles.body10w5.copyWith(
                           color: AppColors.green2,
                         ),
@@ -80,12 +89,13 @@ class CustomListTile extends StatelessWidget {
                           )
                         ]),
                   ),
-                  Text(
-                    price,
-                    style: AppTextStyles.body14w6.copyWith(
-                      color: AppColors.green,
+                  if (!isCourier)
+                    Text(
+                      price!,
+                      style: AppTextStyles.body14w6.copyWith(
+                        color: AppColors.green,
+                      ),
                     ),
-                  ),
                 ],
               ),
             ],
@@ -97,13 +107,13 @@ class CustomListTile extends StatelessWidget {
               width: 47.w,
               height: 102.h,
               decoration: BoxDecoration(
-                color: AppColors.green,
+                color: rightColor ?? AppColors.green,
                 borderRadius: BorderRadius.horizontal(
                   right: Radius.circular(15.r),
                 ),
               ),
               child: SvgPicture.asset(
-                Assets.icons.call,
+                rightIcon ?? Assets.icons.call,
                 width: 18.w,
                 fit: BoxFit.scaleDown,
               ),
