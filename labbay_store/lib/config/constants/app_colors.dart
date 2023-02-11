@@ -20,6 +20,8 @@ abstract class AppColors {
   static const Color backButtonColor =  Color(0xffD1FFE2);
   static const Color messageButtonBg =  Color(0xffE8F9F2);
   static const Color checkBoxColor =  Color(0xff323232);
+  static const Color backgraund =  Color(0xffFBFBFB);
+  static const Color galleryAddBg =  Color(0xffD9FFE7);
   
   static  Color shadowColor = const Color(0xff5AEAB6).withOpacity(.2);
   
