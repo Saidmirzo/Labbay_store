@@ -24,9 +24,21 @@ class _Icons extends _AssetsHolder {
 
   String get call => "$basePath/ic_call.svg";
 
+  String get galleryAdd => "$basePath/ic_gallery_add.svg";
+
+  String get link => "$basePath/ic_link.svg";
+
+  String get linkBlack => "$basePath/ic_link_black.svg";
+
   String get moneyTime => "$basePath/ic_money_time.svg";
 
   String get addCircle => "$basePath/ic_add_circle.svg";
+
+  String get trash => "$basePath/ic_trash.svg";
+
+  String get success => "$basePath/ic_success.svg";
+
+  String get scanner => "$basePath/ic_scanner.svg";
 
   ///
   String get logoLabbay => "$basePath/logo_labbay.svg";

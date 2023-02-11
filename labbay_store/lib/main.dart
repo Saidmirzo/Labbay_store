@@ -19,9 +19,7 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       builder: (context, child) {
         return MaterialApp(
-          theme: ThemeData(
-              useMaterial3: true,
-              scaffoldBackgroundColor: AppColors.accentColor),
+          theme: ThemeData(useMaterial3: true, scaffoldBackgroundColor: AppColors.bgColor),
           debugShowCheckedModeBanner: false,
           onGenerateRoute: (settings) => Routes.generateRoute(settings),
         );

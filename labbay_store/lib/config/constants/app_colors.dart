@@ -12,6 +12,7 @@ abstract class AppColors {
   static const Color freePlaceGrid = Color(0xFFE8F9F2);
   static const Color pink = Color(0xFFFFE0E0);
   static const Color yellow = Color(0xFFFFFBD7);
+  static const Color yellow2 = Color(0xFFFFC750);
   static const Color red = Color(0xFFBE1515);
   static const Color orange = Color(0xFFBE7A15);
   static const  Color textColor1 =  Color(0xff6BDAA5);

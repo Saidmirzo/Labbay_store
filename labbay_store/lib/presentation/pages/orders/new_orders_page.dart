@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:labbay_store/config/constants/app_colors.dart';
-import 'package:labbay_store/config/constants/app_text_styles.dart';
 import 'package:labbay_store/config/constants/assets.dart';
 import 'package:labbay_store/presentation/components/custom_appbar.dart';
 import 'package:labbay_store/presentation/components/custom_list_tile.dart';
+import 'package:labbay_store/presentation/components/time_text.dart';
 
 class NewOrdersPage extends StatefulWidget {
   const NewOrdersPage({super.key});
@@ -18,7 +19,11 @@ class _NewOrdersPageState extends State<NewOrdersPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.bgColor,
-      appBar: const CustomAppBar(title: "Yangi buyurtmalar"),
+      appBar: CustomAppBar(
+        title: "Yangi buyurtmalar",
+        trailing: SvgPicture.asset(Assets.icons.scanner),
+        trailingFunc: () {},
+      ),
       body: CustomScrollView(
         slivers: <Widget>[
           SliverToBoxAdapter(
@@ -30,14 +35,9 @@ class _NewOrdersPageState extends State<NewOrdersPage> {
                 return Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    Padding(
+                    TimeText(
+                      text: "9:35 20/10/2020",
                       padding: EdgeInsets.symmetric(vertical: 8.h),
-                      child: Text(
-                        "9:35 20/10/2020",
-                        style: AppTextStyles.body8w5.copyWith(
-                          color: AppColors.unselectedText,
-                        ),
-                      ),
                     ),
                     CustomListTile(
                       avatar: Assets.images.user1,

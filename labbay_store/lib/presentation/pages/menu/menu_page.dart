@@ -6,7 +6,6 @@ import 'package:labbay_store/config/constants/app_text_styles.dart';
 import '../../../config/constants/app_colors.dart';
 import '../../../config/constants/assets.dart';
 import '../../components/custom_appbar.dart';
-import '../../components/custom_list_tile.dart';
 import '../../components/food_list_tile.dart';
 
 class MenuPage extends StatefulWidget {

@@ -18,7 +18,8 @@ dependencies:
   flutter_svg: ^2.0.0+1
   google_maps_flutter: ^2.2.3
   flutter_switch: ^0.3.2
-
+  dotted_border: ^2.0.0+3
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
