@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_switch/flutter_switch.dart';
 import 'package:labbay_store/config/constants/app_colors.dart';
 import 'package:labbay_store/config/constants/app_text_styles.dart';
 
-import 'custom_switch.dart';
 
 // ignore: must_be_immutable
 class FoodListTile extends StatefulWidget {
@@ -56,30 +56,20 @@ class _FoodListTileState extends State<FoodListTile> {
             ],
           ),
           const Spacer(),
-          CustomSwitch(
+          FlutterSwitch(
+            width: 27.w,
+            height: 16.h,
+            toggleSize: 12.r,
             value: widget.isSwitched,
-            onChanged: (bool value) {
+            borderRadius: 50.0,
+            padding: 2.0,
+            showOnOff: false,
+            onToggle: (val) {
               setState(() {
-                widget.isSwitched = value;
+                widget.isSwitched = val;
               });
             },
-          )
-          // ClipRRect(
-          //   borderRadius: BorderRadius.circular(50.r),
-          //   child: Container(
-          //     width: 27.w,
-          //     height: 16.h,
-          //     color: AppColors.green.withOpacity(.5),
-          //     child: CupertinoSwitch(
-          //       value: widget.isSwitched,
-          //       trackColor: Colors.transparent,
-          //       activeColor: Colors.transparent,
-          //       onChanged: (value) => setState(() {
-          //         widget.isSwitched = value;
-          //       }),
-          //     ),
-          //   ),
-          // ),
+          ),
         ],
       ),
     );
