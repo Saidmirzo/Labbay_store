@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:labbay_store/config/constants/app_text_styles.dart';
+import 'package:labbay_store/presentation/routes/routes.dart';
 
 import '../../../config/constants/app_colors.dart';
 import '../../../config/constants/assets.dart';
@@ -23,14 +24,15 @@ class _MenuPageState extends State<MenuPage> {
       appBar: CustomAppBar(
         title: "Menyular",
         trailing: SvgPicture.asset(Assets.icons.addCircle),
-        trailingFunc: () {},
+        trailingFunc: () => Navigator.pushNamed(context, Routes.addMenuPage),
       ),
       body: ListView(
         padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 24.h),
         children: [
           Text(
             "Chizburgerlar",
-            style: AppTextStyles.body12w4.copyWith(color: AppColors.unselectedText),
+            style: AppTextStyles.body12w4
+                .copyWith(color: AppColors.unselectedText),
           ),
           ...List.generate(
             3,
@@ -43,7 +45,8 @@ class _MenuPageState extends State<MenuPage> {
           ),
           Text(
             "Ichimliklar",
-            style: AppTextStyles.body12w4.copyWith(color: AppColors.unselectedText),
+            style: AppTextStyles.body12w4
+                .copyWith(color: AppColors.unselectedText),
           ),
           FoodListTile(
             image: Assets.images.cola,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:labbay_store/presentation/pages/login/view/login_page.dart';
+import 'package:labbay_store/presentation/pages/orders/order_complated_page.dart';
 import 'package:labbay_store/presentation/pages/reports/view/reports_page.dart';
 import 'package:labbay_store/presentation/pages/settings/view/settings_page.dart';
 import 'package:labbay_store/presentation/pages/history/history_page.dart';
@@ -16,7 +17,7 @@ import '../pages/section/add_section_page.dart';
 import '../pages/section/section_page.dart';
 
 class Routes {
-  static const mainPage = '/mainPage';
+  static const mainPage = '/';
   static const settingsPage = '/settingsPage';
   static const reportsPage = '/reportsPage';
   static const newOrdersPage = '/newOrdersPage';
@@ -28,8 +29,9 @@ class Routes {
   static const addSectionPage = '/addSectionPage';
   static const historyPage = '/historyPage';
   static const deliveredOrderPage = '/deliveredOrderPage';
-  static const orderItemPage = '/';
+  static const orderItemPage = '/orderItemPage';
   static const loginPage = '/loginPage';
+  static const orderComplatedPage = '/orderComplatedPage';
 
   static Route<dynamic> generateRoute(RouteSettings routeSettings) {
     try {
@@ -40,7 +42,7 @@ class Routes {
         case mainPage:
           return MaterialPageRoute(
             settings: routeSettings,
-            builder: (_) => const MainPage(),
+            builder: (_) => MainPage(),
           );
         case settingsPage:
           return MaterialPageRoute(
@@ -50,8 +52,9 @@ class Routes {
         case reportsPage:
           return MaterialPageRoute(
             settings: routeSettings,
-            builder: (_) => const ReportsPage(),);
-          case newOrdersPage:
+            builder: (_) => const ReportsPage(),
+          );
+        case newOrdersPage:
           return MaterialPageRoute(
             settings: routeSettings,
             builder: (_) => const NewOrdersPage(),
@@ -101,21 +104,26 @@ class Routes {
             settings: routeSettings,
             builder: (_) => const OrderItemPage(),
           );
-           case loginPage:
+        case loginPage:
           return MaterialPageRoute(
             settings: routeSettings,
             builder: (_) => const LoginPage(),
           );
+        case orderComplatedPage:
+          return MaterialPageRoute(
+            settings: routeSettings,
+            builder: (_) => const OrderComplatedPage(),
+          );
         default:
           return MaterialPageRoute(
             settings: routeSettings,
-            builder: (_) => const MainPage(),
+            builder: (_) => MainPage(),
           );
       }
     } catch (e) {
       return MaterialPageRoute(
         settings: routeSettings,
-        builder: (_) => const MainPage(),
+        builder: (_) => MainPage(),
       );
     }
   }

@@ -62,6 +62,8 @@ class _Icons extends _AssetsHolder {
 
   String get scanner => "$basePath/ic_scanner.svg";
 
+  String get gps => "$basePath/gps.svg";
+
   ///
   String get logoLabbay => "$basePath/logo_labbay.svg";
 
@@ -106,6 +108,14 @@ class _Icons extends _AssetsHolder {
   String get infoCircle => "$basePath/ic_info_circle.svg";
 
   String get checkbox => "$basePath/ic_checkbox.svg";
+
+  String get home => "$basePath/home.svg";
+
+  String get bottomNavBarclock => "$basePath/clock_bottom_nav_bar.svg";
+
+  String get setting => "$basePath/setting.svg";
+
+  String get noteFavorite => "$basePath/note_favorite.svg";
 
 }
 

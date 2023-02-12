@@ -27,7 +27,11 @@ class _AddMenuPageState extends State<AddMenuPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.bgColor,
-      appBar: const CustomAppBar(title: "Menyu qo’shish"),
+      appBar: CustomAppBar(
+        title: "Menyu qo’shish",
+        leading: SvgPicture.asset(Assets.icons.arrowLeft2),
+        leadingFunc: () => Navigator.pop(context),
+      ),
       body: ListView(
         padding: EdgeInsets.only(
           top: 24.h,
@@ -82,7 +86,8 @@ class _AddMenuPageState extends State<AddMenuPage> {
                 toggleSize: 12.r,
                 activeColor: AppColors.green2.withOpacity(.3),
                 inactiveColor: AppColors.green2.withOpacity(.3),
-                toggleColor: visible ? AppColors.green : AppColors.green.withOpacity(.3),
+                toggleColor:
+                    visible ? AppColors.green : AppColors.green.withOpacity(.3),
                 value: visible,
                 borderRadius: 50.0,
                 padding: 2.0,

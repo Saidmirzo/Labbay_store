@@ -37,89 +37,92 @@ class CustomListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 102.h,
-      width: double.maxFinite,
-      margin: margin,
-      padding: EdgeInsets.only(left: 14.w),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15.r),
-        color: AppColors.accentColor,
-      ),
-      child: Row(
-        children: [
-          CircleAvatar(
-            foregroundImage: AssetImage(avatar ?? Assets.images.defaultAvatar),
-            radius: avatarRadius ?? 38.r,
-          ),
-          SizedBox(width: 24.w),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(username, style: AppTextStyles.body14w5),
-                  Text(
-                    address,
-                    style: AppTextStyles.body10w5.copyWith(
-                      color: AppColors.unselectedText,
-                    ),
-                  ),
-                ],
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  RichText(
-                    text: TextSpan(
-                        text: isCourier ? "Avto turi: " : "Turi: ",
-                        style: AppTextStyles.body10w5.copyWith(
-                          color: AppColors.green2,
-                        ),
-                        children: [
-                          TextSpan(
-                            text: type,
-                            style: AppTextStyles.body10w5.copyWith(
-                              color: AppColors.green,
-                            ),
-                          )
-                        ]),
-                  ),
-                  if (!isCourier)
+    return InkWell(
+      onTap: callFunc,
+      child: Container(
+        height: 102.h,
+        width: double.maxFinite,
+        margin: margin,
+        padding: EdgeInsets.only(left: 14.w),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15.r),
+          color: AppColors.accentColor,
+        ),
+        child: Row(
+          children: [
+            CircleAvatar(
+              foregroundImage: AssetImage(avatar ?? Assets.images.defaultAvatar),
+              radius: avatarRadius ?? 38.r,
+            ),
+            SizedBox(width: 24.w),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(username, style: AppTextStyles.body14w5),
                     Text(
-                      price!,
-                      style: AppTextStyles.body14w6.copyWith(
-                        color: AppColors.green,
+                      address,
+                      style: AppTextStyles.body10w5.copyWith(
+                        color: AppColors.unselectedText,
                       ),
                     ),
-                ],
-              ),
-            ],
-          ),
-          const Spacer(),
-          SplashButton(
-            onTap: callFunc ?? () {},
-            child: Container(
-              width: 47.w,
-              height: 102.h,
-              decoration: BoxDecoration(
-                color: rightColor ?? AppColors.green,
-                borderRadius: BorderRadius.horizontal(
-                  right: Radius.circular(15.r),
+                  ],
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    RichText(
+                      text: TextSpan(
+                          text: isCourier ? "Avto turi: " : "Turi: ",
+                          style: AppTextStyles.body10w5.copyWith(
+                            color: AppColors.green2,
+                          ),
+                          children: [
+                            TextSpan(
+                              text: type,
+                              style: AppTextStyles.body10w5.copyWith(
+                                color: AppColors.green,
+                              ),
+                            )
+                          ]),
+                    ),
+                    if (!isCourier)
+                      Text(
+                        price!,
+                        style: AppTextStyles.body14w6.copyWith(
+                          color: AppColors.green,
+                        ),
+                      ),
+                  ],
+                ),
+              ],
+            ),
+            const Spacer(),
+            SplashButton(
+              onTap:  () {},
+              child: Container(
+                width: 47.w,
+                height: 102.h,
+                decoration: BoxDecoration(
+                  color: rightColor ?? AppColors.green,
+                  borderRadius: BorderRadius.horizontal(
+                    right: Radius.circular(15.r),
+                  ),
+                ),
+                child: SvgPicture.asset(
+                  rightIcon ?? Assets.icons.call,
+                  width: 18.w,
+                  fit: BoxFit.scaleDown,
                 ),
               ),
-              child: SvgPicture.asset(
-                rightIcon ?? Assets.icons.call,
-                width: 18.w,
-                fit: BoxFit.scaleDown,
-              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

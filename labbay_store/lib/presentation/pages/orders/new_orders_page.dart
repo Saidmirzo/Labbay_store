@@ -48,7 +48,7 @@ class _NewOrdersPageState extends State<NewOrdersPage> {
                       price: "126 000 UZS",
                       callFunc: () => Navigator.pushNamed(
                         context,
-                        Routes.deliveredOrderPage,
+                        Routes.orderItemPage,
                       ),
                     ),
                   ],

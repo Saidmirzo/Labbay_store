@@ -30,8 +30,12 @@ abstract class AppColors {
   static const Color chartBottomTextColor =  Color(0xff828282);
   static const Color chartGridLineColor =  Color(0xffC0FFD8);
   static const Color messageButtonBg2 =  Color(0xffEFEFEF);
+  static const Color inActiveColor =  Color(0xffA1F8CF);
+
   
   static  Color shadowColor = const Color(0xff5AEAB6).withOpacity(.2);
+  static  Color shadowColor2 = const  Color(0xff5A6CEA).withOpacity(.1);
+
   
   
 

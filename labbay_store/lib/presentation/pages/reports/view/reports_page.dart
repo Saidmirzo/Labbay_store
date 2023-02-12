@@ -27,6 +27,8 @@ class _ReportsPageState extends State<ReportsPage> {
       appBar: CustomAppBar(
         title: 'Hisobotlar',
         trailing: SvgPicture.asset(Assets.icons.calendar),
+        leading: SvgPicture.asset(Assets.icons.arrowLeft2),
+        leadingFunc: () => Navigator.pop(context),
       ),
       body: Column(
         children: [

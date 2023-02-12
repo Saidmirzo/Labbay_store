@@ -22,7 +22,7 @@ class SettingsItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return GestureDetector(
       onTap: () => onTap(),
       child: Container(
         height: 88.h,

@@ -78,11 +78,13 @@ class OrderCancelItem extends StatelessWidget {
   const OrderCancelItem({
     super.key,
     required this.title,
-    required this.isActive,
+    this.isActive,
     required this.ontap,
+    this.leading,
   });
   final String title;
-  final bool isActive;
+  final bool? isActive;
+  final Widget? leading;
   final Function() ontap;
 
   @override
@@ -98,7 +100,10 @@ class OrderCancelItem extends StatelessWidget {
         ),
         child: Row(
           children: [
-            CustomCheckBox(isActive: isActive),
+            Padding(
+              padding: EdgeInsets.only(left: 16.w, right: 12.w),
+              child: leading ?? CustomCheckBox(isActive: isActive ?? false),
+            ),
             Text(
               title,
               style: AppTextStyles.body16w5,

@@ -6,6 +6,7 @@ import '../../../../../config/constants/app_colors.dart';
 import '../../../../../config/constants/app_decorations.dart';
 import '../../../../../config/constants/app_text_styles.dart';
 import '../../../../../config/constants/assets.dart';
+import '../../../components/custom_confirmation_text_button.dart';
 import '../components/custom_text_field.dart';
 
 class LoginPage extends StatelessWidget {
@@ -40,20 +41,9 @@ class LoginPage extends StatelessWidget {
                 path: Assets.icons.iconLock,
               ),
               SizedBox(height: 6.h),
-              TextButton(
-                onPressed: () {},
-                style: AppDecorations.buttonStyle(
-                  bgColor: AppColors.buttonColor,
-                  borderRadius: 15,
-                  padding: EdgeInsets.symmetric(vertical: 18.h),
-                  size: const Size.fromWidth(double.maxFinite),
-                ),
-                child: Text(
-                  'Login',
-                  style: AppTextStyles.body16w5.copyWith(
-                    color: AppColors.accentColor,
-                  ),
-                ),
+              CustomConfirmationTextButton(
+                text: 'Login',
+                ontap: () {},
               ),
               const Spacer(),
               Text(

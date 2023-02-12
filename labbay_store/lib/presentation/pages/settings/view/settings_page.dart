@@ -6,6 +6,7 @@ import 'package:labbay_store/config/constants/app_text_styles.dart';
 import 'package:labbay_store/config/constants/assets.dart';
 import 'package:labbay_store/presentation/components/custom_appbar.dart';
 import 'package:labbay_store/presentation/components/custom_switch.dart';
+import 'package:labbay_store/presentation/routes/routes.dart';
 
 import '../components/setting_item.dart';
 
@@ -93,7 +94,7 @@ class SettingsPage extends StatelessWidget {
           SettingsItem(
             title: 'Hisobotlar',
             iconPath: Assets.icons.presention,
-            onTap: () {},
+            onTap: () => Navigator.pushNamed(context, Routes.reportsPage),
           ),
           SettingsItem(
             title: 'Buyurtmalar tarixi',

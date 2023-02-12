@@ -1,32 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:labbay_store/config/constants/app_colors.dart';
 import 'package:labbay_store/config/constants/assets.dart';
 import 'package:labbay_store/config/constants/local_data.dart';
 import 'package:labbay_store/presentation/components/custom_appbar.dart';
-import 'package:labbay_store/presentation/routes/routes.dart';
-
-import '../../components/custom_button.dart';
+import 'package:labbay_store/presentation/components/custom_confirmation_text_button.dart';
+import 'package:labbay_store/presentation/pages/orders/components/booking_order_bottom_sheet.dart';
+import '../../../config/constants/app_colors.dart';
 import '../../components/custom_list_tile.dart';
 import '../../components/order_cancel_bottom_sheet.dart';
 import '../../components/recipe_card.dart';
 
-class OrderItemPage extends StatefulWidget {
-  const OrderItemPage({super.key});
+class OrderComplatedPage extends StatefulWidget {
+  const OrderComplatedPage({super.key});
 
   @override
-  State<OrderItemPage> createState() => _OrderItemPageState();
+  State<OrderComplatedPage> createState() => _OrderComplatedPageState();
 }
 
-class _OrderItemPageState extends State<OrderItemPage> {
+class _OrderComplatedPageState extends State<OrderComplatedPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
         leading: SvgPicture.asset(Assets.icons.arrowLeft2),
         leadingFunc: () => Navigator.pop(context),
-        title: "Bobur Yuldashev",
+        title: "Yangi buyurtmalar",
       ),
       body: Column(
         children: [
@@ -52,32 +51,23 @@ class _OrderItemPageState extends State<OrderItemPage> {
               ],
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              CustomButton(
-                onTap: () {
-                  showModalBottomSheet(
-                    context: context,
-                    barrierColor: AppColors.green.withOpacity(.37),
-                    builder: (context) {
-                      return const OrderCancelBottomSheet();
-                    },
-                  );
-                },
-                text: 'Bekor qilish',
-                bgColor: AppColors.messageButtonBg2,
-              ),
-              SizedBox(width: 12.w),
-              CustomButton(
-                onTap: () =>Navigator.pushNamed(context, Routes.orderComplatedPage),
-                text: 'Qabul qilish',
-                bgColor: AppColors.green,
-                textColor: AppColors.accentColor,
-              ),
-            ],
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 13.w).copyWith(
+              bottom: 20.h,
+            ),
+            child: CustomConfirmationTextButton(
+              text: 'Buyurtmani tayyorlashni boshlash',
+              ontap: () {
+                showModalBottomSheet(
+                  context: context,
+                  barrierColor: AppColors.green.withOpacity(.37),
+                  builder: (context) {
+                    return const BookingOrderBottomSheet();
+                  },
+                );
+              },
+            ),
           ),
-          SizedBox(height: 15.h),
         ],
       ),
     );
