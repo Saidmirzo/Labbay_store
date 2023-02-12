@@ -24,6 +24,28 @@ class _Icons extends _AssetsHolder {
 
   String get call => "$basePath/ic_call.svg";
 
+  String get check => "$basePath/ic_check.svg";
+
+  String get timer => "$basePath/timer.svg";
+
+  String get callDark => "$basePath/call_dark.svg";
+
+  String get shop => "$basePath/shop.svg";
+
+  String get presention => "$basePath/presention.svg";
+
+  String get clock => "$basePath/clock.svg";
+
+  String get sections => "$basePath/sections.svg";
+
+  String get translateDark => "$basePath/translate.svg";
+
+  String get headphone => "$basePath/headphone.svg";
+
+  String get lifebuoy => "$basePath/lifebuoy.svg";
+
+  String get calendar => "$basePath/calendar.svg";
+
   String get galleryAdd => "$basePath/ic_gallery_add.svg";
 
   String get link => "$basePath/ic_link.svg";
@@ -84,6 +106,7 @@ class _Icons extends _AssetsHolder {
   String get infoCircle => "$basePath/ic_info_circle.svg";
 
   String get checkbox => "$basePath/ic_checkbox.svg";
+
 }
 
 class _Images extends _AssetsHolder {
@@ -96,6 +119,8 @@ class _Images extends _AssetsHolder {
   String get gamburger => "$basePath/gamburger.png";
 
   String get cola => "$basePath/cola.png";
+
+  String get user2 => "$basePath/user2.png";
 
   String get desertBg => "$basePath/desert_bg.png";
 
