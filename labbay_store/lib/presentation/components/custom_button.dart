@@ -29,7 +29,7 @@ class CustomButton extends StatelessWidget {
       style: AppDecorations.buttonStyle(
         bgColor: bgColor ?? AppColors.messageButtonBg,
         borderRadius: 15.r,
-        size: size ?? Size(142.w, 57.h),
+        size: size ?? Size(164.w, 65.h),
       ),
       child: Row(
         mainAxisAlignment: textAlign,

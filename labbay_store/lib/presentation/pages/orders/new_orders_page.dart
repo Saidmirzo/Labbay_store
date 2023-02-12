@@ -6,6 +6,7 @@ import 'package:labbay_store/config/constants/assets.dart';
 import 'package:labbay_store/presentation/components/custom_appbar.dart';
 import 'package:labbay_store/presentation/components/custom_list_tile.dart';
 import 'package:labbay_store/presentation/components/time_text.dart';
+import 'package:labbay_store/presentation/routes/routes.dart';
 
 class NewOrdersPage extends StatefulWidget {
   const NewOrdersPage({super.key});
@@ -45,6 +46,10 @@ class _NewOrdersPageState extends State<NewOrdersPage> {
                       address: "177, Amir Temur ko'chasi",
                       type: "Yetkazib berish",
                       price: "126 000 UZS",
+                      callFunc: () => Navigator.pushNamed(
+                        context,
+                        Routes.deliveredOrderPage,
+                      ),
                     ),
                   ],
                 );
