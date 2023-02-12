@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:labbay_store/presentation/pages/login/view/login_page.dart';
 import 'package:labbay_store/presentation/pages/reports/view/reports_page.dart';
 import 'package:labbay_store/presentation/pages/settings/view/settings_page.dart';
 import 'package:labbay_store/presentation/pages/history/history_page.dart';
@@ -17,7 +18,7 @@ import '../pages/section/section_page.dart';
 class Routes {
   static const mainPage = '/mainPage';
   static const settingsPage = '/settingsPage';
-  static const reportsPage = '/mainPage';
+  static const reportsPage = '/reportsPage';
   static const newOrdersPage = '/newOrdersPage';
   static const googleMapPage = '/googleMapPage';
   static const ordersOnTheWayPage = '/ordersOnTheWayPage';
@@ -28,6 +29,7 @@ class Routes {
   static const historyPage = '/historyPage';
   static const deliveredOrderPage = '/deliveredOrderPage';
   static const orderItemPage = '/';
+  static const loginPage = '/loginPage';
 
   static Route<dynamic> generateRoute(RouteSettings routeSettings) {
     try {
@@ -98,6 +100,11 @@ class Routes {
           return MaterialPageRoute(
             settings: routeSettings,
             builder: (_) => const OrderItemPage(),
+          );
+           case loginPage:
+          return MaterialPageRoute(
+            settings: routeSettings,
+            builder: (_) => const LoginPage(),
           );
         default:
           return MaterialPageRoute(
